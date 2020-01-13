@@ -30,5 +30,7 @@ public class Table extends JPanel{
     public void dibujar(Graphics2D g){
         g.fill(pelota.getPelota());
     }
-    
+    public void actualizar(){
+        this.pelota.mover(getBounds());
+    }
 }

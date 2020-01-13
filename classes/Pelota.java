@@ -10,5 +10,10 @@ package classes;
  * @author carlos
  */
 public class Pelota {
+    private int posicionx;
+    private int posiciony;
     
+    public Pelota(){
+        //Constructor por defecto
+    }
 }

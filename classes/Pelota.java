@@ -16,4 +16,10 @@ public class Pelota {
     public Pelota(){
         //Constructor por defecto
     }
+
+    public Pelota(int posicionx, int posiciony) {
+        this.posicionx = posicionx;
+        this.posiciony = posiciony;
+    }
+    
 }

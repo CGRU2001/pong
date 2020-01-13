@@ -12,20 +12,21 @@ import javax.swing.JFrame;
  * @author carlos
  */
 public class Ventana extends JFrame {
-    public static final int ANCHO=800, ALTO=500;
+
+    public static final int ANCHO = 800, ALTO = 500;
     private Table tablero; //Creamos el tablero
     private Threads ejecucion;
-    public Ventana(){
+
+    public Ventana() {
 
         setTitle("Pong (By Carlos Rodríguez)");
-        setSize(ANCHO,ALTO); 
+        setSize(ANCHO, ALTO);
         setLocationRelativeTo(null); //Ubicamos la pantalla en el centro de la pantalla
         setResizable(false); //Impide que modifique el tamaño de la ventana
-        setVisible(true); //Decimos que la ventana sea visible
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Decimos que se cierre el programa completo al pulsar la X
-//        tablero = new Table();
-//        add(tablero);//añadimos el tablero al juego
-        tablero.iterarJuego();
-        
+
+        tablero = new Table();
+        add(tablero);//añadimos el tablero al juego
+
     }
 }
+ 

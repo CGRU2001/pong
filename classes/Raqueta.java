@@ -13,7 +13,7 @@ import java.awt.geom.Rectangle2D;
  */
 public class Raqueta {
     
-    public static final int ANCHO=10, ALTO=25;
+    public static final int ANCHO=10, ALTO=40;
     
     private int x, y;
     

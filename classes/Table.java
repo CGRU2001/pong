@@ -19,6 +19,8 @@ import javax.swing.JPanel;
  */
 public class Table extends JPanel{
     Pelota pelota = new Pelota(0, 0);
+    Raqueta izda = new Raqueta(10,200);
+    Raqueta drcha = new Raqueta(774, 200);
     public Table(){
         setBackground(Color.BLACK); //Establecemos color de fondo
     }
@@ -32,6 +34,8 @@ public class Table extends JPanel{
     }
     public void dibujar(Graphics2D g){
         g.fill(pelota.getPelota());
+        g.fill(izda.getRaqueta());
+        g.fill(drcha.getRaqueta());
     }
     public void actualizar(){
         this.pelota.mover(getBounds());

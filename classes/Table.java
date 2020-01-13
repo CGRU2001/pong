@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
 
 /**
@@ -33,5 +35,15 @@ public class Table extends JPanel{
     }
     public void actualizar(){
         this.pelota.mover(getBounds());
+    }
+    public void iterarJuego(){
+        while(true){
+            try {
+                this.repaint();
+                Thread.sleep(10);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Table.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 }

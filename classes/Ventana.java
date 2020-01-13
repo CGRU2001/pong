@@ -13,6 +13,7 @@ import javax.swing.JFrame;
  */
 public class Ventana extends JFrame {
     public static final int ANCHO=800, ALTO=500;
+    private Table tablero; //Creamos el tablero
     public Ventana(){
 
         setTitle("Pong (By Carlos Rodríguez)");

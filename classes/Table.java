@@ -26,6 +26,7 @@ public class Table extends JPanel{
         Graphics2D g2 = (Graphics2D)g; //Hacemos un cast de g para poder usarlo en 2 dimensiones
         g2.setColor(Color.YELLOW); //Damos G2 (Donde guardamos g) un color amarillo
         this.dibujar(g2);//Pinta g2
+        actualizar();
     }
     public void dibujar(Graphics2D g){
         g.fill(pelota.getPelota());

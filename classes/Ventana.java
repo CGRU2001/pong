@@ -21,9 +21,11 @@ public class Ventana extends JFrame {
         setSize(ANCHO,ALTO); 
         setLocationRelativeTo(null); //Ubicamos la pantalla en el centro de la pantalla
         setResizable(false); //Impide que modifique el tamaño de la ventana
-        tablero = new Table();
-        add(tablero);//añadimos el tablero al juego
-        ejecucion = new Threads(tablero);
-        ejecucion.start();
+        setVisible(true); //Decimos que la ventana sea visible
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Decimos que se cierre el programa completo al pulsar la X
+//        tablero = new Table();
+//        add(tablero);//añadimos el tablero al juego
+        tablero.iterarJuego();
+        
     }
 }

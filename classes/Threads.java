@@ -17,6 +17,9 @@ public class Threads extends Thread{
     @Override
     public void run(){
         while(true){
+            try{
+            Thread.sleep(10);
+            }catch(Exception e){}
             this.tablero.repaint();
         }
     }

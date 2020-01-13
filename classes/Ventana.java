@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 public class Ventana extends JFrame {
     public static final int ANCHO=800, ALTO=500;
     private Table tablero; //Creamos el tablero
+    private Threads ejecucion;
     public Ventana(){
 
         setTitle("Pong (By Carlos Rodríguez)");
@@ -22,5 +23,6 @@ public class Ventana extends JFrame {
         setResizable(false); //Impide que modifique el tamaño de la ventana
         tablero = new Table();
         add(tablero);//añadimos el tablero al juego
+        ejecucion = new Threads(tablero);
     }
 }

@@ -16,6 +16,7 @@ import javax.swing.JPanel;
  * @author carlos
  */
 public class Table extends JPanel{
+    Pelota pelota = new Pelota(0, 0);
     public Table(){
         setBackground(Color.BLACK); //Establecemos color de fondo
     }
@@ -24,8 +25,10 @@ public class Table extends JPanel{
         super.paintComponent(g);//Pinta G (pelota)
         Graphics2D g2 = (Graphics2D)g; //Hacemos un cast de g para poder usarlo en 2 dimensiones
         g2.setColor(Color.YELLOW); //Damos G2 (Donde guardamos g) un color amarillo
-        g2.fill(new Rectangle2D.Double(0,0,20,20));//Posicion 0 y tamaño 20
-        
-        
+        this.dibujar(g2);//Pinta g2
     }
+    public void dibujar(Graphics2D g){
+        g.fill(pelota.getPelota());
+    }
+    
 }

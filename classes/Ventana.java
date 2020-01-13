@@ -24,5 +24,6 @@ public class Ventana extends JFrame {
         tablero = new Table();
         add(tablero);//añadimos el tablero al juego
         ejecucion = new Threads(tablero);
+        ejecucion.start();
     }
 }

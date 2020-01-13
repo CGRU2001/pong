@@ -5,10 +5,15 @@
  */
 package classes;
 
+import java.awt.Color;
+import javax.swing.JPanel;
+
 /**
  *
  * @author carlos
  */
-public class Table {
-    
+public class Table extends JPanel{
+    public Table(){
+        setBackground(Color.BLACK); //Establecemos color de fondo
+    }
 }

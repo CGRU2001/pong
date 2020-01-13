@@ -20,5 +20,7 @@ public class Ventana extends JFrame {
         setSize(ANCHO,ALTO); 
         setLocationRelativeTo(null); //Ubicamos la pantalla en el centro de la pantalla
         setResizable(false); //Impide que modifique el tamaño de la ventana
+        tablero = new Table();
+        add(tablero);//añadimos el tablero al juego
     }
 }

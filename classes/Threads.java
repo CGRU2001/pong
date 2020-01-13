@@ -12,6 +12,13 @@ package classes;
 public class Threads extends Thread{
     Table tablero;
     public Threads(Table tablero){
-        this.lamina = lamina;
+        this.tablero = tablero;
+    }
+    @Override
+    public void run(){
+        while(true){
+            this.tablero.repaint();
+        }
     }
 }
+

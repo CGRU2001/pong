@@ -7,6 +7,8 @@ package classes;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Rectangle2D;
 import javax.swing.JPanel;
 
 /**
@@ -19,6 +21,11 @@ public class Table extends JPanel{
     }
     @Override
     public void paintComponent(Graphics g){
+        super.paintComponent(g);//Pinta G (pelota)
+        Graphics2D g2 = (Graphics2D)g; //Hacemos un cast de g para poder usarlo en 2 dimensiones
+        g2.setColor(Color.YELLOW); //Damos G2 (Donde guardamos g) un color amarillo
+        g2.fill(new Rectangle2D.Double(0,0,20,20));//Posicion 0 y tamaño 20
+        
         
     }
 }

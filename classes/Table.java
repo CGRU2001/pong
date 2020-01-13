@@ -6,6 +6,7 @@
 package classes;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
@@ -15,5 +16,9 @@ import javax.swing.JPanel;
 public class Table extends JPanel{
     public Table(){
         setBackground(Color.BLACK); //Establecemos color de fondo
+    }
+    @Override
+    public void paintComponent(Graphics g){
+        
     }
 }

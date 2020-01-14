@@ -31,7 +31,7 @@ public class Raqueta {
         if (Events.w && y > limites.getMinY()) {
             y--;
         }
-        if (Events.s && y < limites.getMaxY()) {
+        if (Events.s && y < limites.getMaxY() - ALTO) {
             y++;
         }
     }
@@ -40,7 +40,7 @@ public class Raqueta {
         if (Events.up && y > limites.getMinY()) {
             y--;
         }
-        if (Events.down && y < limites.getMaxY()) {
+        if (Events.down && y < limites.getMaxY() - ALTO) {
             y++;
         }
     }

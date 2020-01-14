@@ -27,9 +27,17 @@ public class Pelota {
     public Rectangle2D getPelota(){
         return new Rectangle2D.Double(posicionx, posiciony, this.ANCHO, this.ALTO ); //Devuelve la posicion de la pelota
     }
-    public void mover(Rectangle2D limites){
+    public void mover(Rectangle2D limites, boolean colisionR1, boolean colisionR2){
         this.posicionx+=this.dx;
         this.posiciony+=this.dy;
+        
+        if(colisionR1){
+            dx=-dx;
+        }
+        
+        if(colisionR2){
+            dx=-dx;
+        }
         if(posicionx>limites.getMaxX()){
             this.dx=-this.dx;
         }

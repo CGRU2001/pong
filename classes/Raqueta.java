@@ -24,4 +24,10 @@ public class Raqueta {
     public Rectangle2D getRaqueta(){
         return new Rectangle2D.Double(x, y, ANCHO, ALTO);
     }
+    public void moverR1(){
+        
+    }
+    public void moverR2(){
+        
+    }
 }

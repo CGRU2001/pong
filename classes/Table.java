@@ -38,7 +38,7 @@ public class Table extends JPanel{
         g.fill(drcha.getRaqueta());
     }
     public void actualizar(){
-        this.pelota.mover(getBounds());
+        this.pelota.mover(getBounds(), colision(izda.getRaqueta()), colision(drcha.getRaqueta()));
         izda.moverR1(getBounds());
         drcha.moverR2(getBounds());
     }

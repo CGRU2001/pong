@@ -33,10 +33,12 @@ public class Pelota {
         
         if(colisionR1){
             dx=-dx;
+            posicionx=25;
         }
         
         if(colisionR2){
             dx=-dx;
+            posicionx=745;
         }
         if(posicionx>limites.getMaxX()){
             this.dx=-this.dx;

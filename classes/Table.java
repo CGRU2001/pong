@@ -52,4 +52,7 @@ public class Table extends JPanel{
             }
         }
     }
+    private boolean colision(Rectangle2D r){
+        return pelota.getPelota().intersects(r);
+    }
 }

@@ -12,14 +12,16 @@ import java.awt.event.KeyEvent;
  *
  * @author carlos
  */
-public class Events extends KeyAdapter{
-    public static boolean w, s, up, down;
+public class Events extends KeyAdapter {
+
+    static boolean w, s;
+    static boolean up, down;
 
     @Override
     public void keyPressed(KeyEvent e) {
 
         int id = e.getKeyCode();
-        
+
         if (id == KeyEvent.VK_W) {
             w = true;
         }
@@ -38,7 +40,7 @@ public class Events extends KeyAdapter{
     public void keyReleased(KeyEvent e) {
 
         int id = e.getKeyCode();
-        
+
         if (id == KeyEvent.VK_W) {
             w = false;
         }
@@ -52,6 +54,4 @@ public class Events extends KeyAdapter{
             down = false;
         }
     }
-    
-
 }

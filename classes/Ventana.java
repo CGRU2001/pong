@@ -26,6 +26,7 @@ public class Ventana extends JFrame {
 
         tablero = new Table();
         add(tablero);//añadimos el tablero al juego
+        addKeyListener(new Events());
         ejecucion = new Threads(tablero);
         ejecucion.start();
 

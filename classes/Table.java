@@ -39,6 +39,8 @@ public class Table extends JPanel{
     }
     public void actualizar(){
         this.pelota.mover(getBounds());
+        izda.moverR1(getBounds());
+        drcha.moverR2(getBounds());
     }
     public void iterarJuego(){
         while(true){

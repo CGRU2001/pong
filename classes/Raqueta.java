@@ -5,6 +5,7 @@
  */
 package classes;
 
+import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 
 /**
@@ -12,22 +13,35 @@ import java.awt.geom.Rectangle2D;
  * @author carlos
  */
 public class Raqueta {
-    
-    public static final int ANCHO=10, ALTO=40;
-    
+
+    public static final int ANCHO = 10, ALTO = 40;
+
     private int x, y;
-    
-    public Raqueta(int x, int y){
-        this.x=x;
-        this.y=y;
+
+    public Raqueta(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
-    public Rectangle2D getRaqueta(){
+
+    public Rectangle2D getRaqueta() {
         return new Rectangle2D.Double(x, y, ANCHO, ALTO);
     }
-    public void moverR1(){
-        
+
+    public void moverR1(Rectangle limites) {
+        if (Events.w && y > limites.getMinY()) {
+            y--;
+        }
+        if (Events.s && y < limites.getMaxY()) {
+            y++;
+        }
     }
-    public void moverR2(){
-        
+
+    public void moverR2(Rectangle limites) {
+        if (Events.up && y > limites.getMinY()) {
+            y--;
+        }
+        if (Events.down && y < limites.getMaxY()) {
+            y++;
+        }
     }
 }

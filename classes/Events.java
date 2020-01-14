@@ -5,10 +5,14 @@
  */
 package classes;
 
+import java.awt.event.KeyAdapter;
+
 /**
  *
  * @author carlos
  */
-public class Events {
+public class Events extends KeyAdapter{
+    public static boolean w, s, up, down;
+    
     
 }
